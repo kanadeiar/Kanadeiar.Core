@@ -20,7 +20,7 @@
     <Copyright>Kanadeiar</Copyright>
     <PackageProjectUrl>https://github.com/kanadeiar/Kanadeiar.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kanadeiar/Kanadeiar.Core</RepositoryUrl>
-    <PackageIcon>42916202.png</PackageIcon>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>dotnet, tools, algorithms, instructions</PackageTags>
     <SignAssembly>True</SignAssembly>
@@ -37,7 +37,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="C:\Users\Admin\Pictures\42916202.png">
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="logo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
