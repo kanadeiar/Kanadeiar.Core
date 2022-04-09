@@ -10,9 +10,23 @@
 
     </Window.Resources>
 	<Grid>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Text="Test" Margin="15, 25" Width="120"
+        <TextBox x:Name="TextBoxTo" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Test" Margin="15, 25" Width="320"
                  Style="{StaticResource SpecTextBoxStyle}" BorderBrush="Red" Background="Orange" Foreground="Green"
-                 Tag="Значение текста:">
+                 Tag="Текст для зашифровки:">
+        </TextBox>
+        
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15, 80" Padding="5" Click="ButtonTestEncrypt_Click">Зашифровать текст</Button>
+        
+        <TextBox x:Name="TextBoxFrom" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Test" Margin="15, 115" Width="320"
+                 Style="{StaticResource SpecTextBoxStyle}" BorderBrush="Red" Background="Orange" Foreground="Green"
+                 Tag="Текст после зашифровки:">
+        </TextBox>
+
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15, 150" Padding="5" Click="ButtonTextDecrypt_Click">Расшифровать текст</Button>
+
+        <TextBox x:Name="TextBoxReturn" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Test" Margin="15, 185" Width="320"
+                 Style="{StaticResource SpecTextBoxStyle}" BorderBrush="Red" Background="Orange" Foreground="Green"
+                 Tag="Текст после зашифровки:">
         </TextBox>
     </Grid>
 </Window>
