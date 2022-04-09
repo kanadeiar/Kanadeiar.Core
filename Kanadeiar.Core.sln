@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E631E17D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTest", "Tests\WpfAppTest\WpfAppTest.csproj", "{27AADC36-6344-43BB-81D0-C69690F0F0E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTest", "ConsoleAppTest\ConsoleAppTest.csproj", "{2122D39E-AEA1-4773-9D8D-2C67875AFB29}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanadeiar.Core.WPF", "Kanadeiar.Core.WPF\Kanadeiar.Core.WPF.csproj", "{C7B88B94-66FD-4C71-ADEA-704894FFB277}"
 EndProject
 Global
@@ -27,10 +25,6 @@ Global
 		{27AADC36-6344-43BB-81D0-C69690F0F0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27AADC36-6344-43BB-81D0-C69690F0F0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27AADC36-6344-43BB-81D0-C69690F0F0E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2122D39E-AEA1-4773-9D8D-2C67875AFB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2122D39E-AEA1-4773-9D8D-2C67875AFB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2122D39E-AEA1-4773-9D8D-2C67875AFB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2122D39E-AEA1-4773-9D8D-2C67875AFB29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C7B88B94-66FD-4C71-ADEA-704894FFB277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7B88B94-66FD-4C71-ADEA-704894FFB277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B88B94-66FD-4C71-ADEA-704894FFB277}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,7 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27AADC36-6344-43BB-81D0-C69690F0F0E7} = {E631E17D-5DC1-4BCA-BFDF-2B061A061F84}
-		{2122D39E-AEA1-4773-9D8D-2C67875AFB29} = {E631E17D-5DC1-4BCA-BFDF-2B061A061F84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38449330-09F5-4940-A543-70F14E90CB80}

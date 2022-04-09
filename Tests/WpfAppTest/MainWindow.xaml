@@ -3,10 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfAppTest"
+        xmlns:l="clr-namespace:WpfAppTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
 
+    </Window.Resources>
+	<Grid>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Text="Test" Margin="15, 25" Width="120"
+                 Style="{StaticResource SpecTextBoxStyle}" BorderBrush="Red" Background="Orange" Foreground="Green"
+                 Tag="Значение текста:">
+        </TextBox>
     </Grid>
 </Window>
