@@ -7,11 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanadeiar.Core", "Kanadeiar
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E631E17D-5DC1-4BCA-BFDF-2B061A061F84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTest", "Tests\WpfAppTest\WpfAppTest.csproj", "{27AADC36-6344-43BB-81D0-C69690F0F0E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppTest", "Tests\WpfAppTest\WpfAppTest.csproj", "{27AADC36-6344-43BB-81D0-C69690F0F0E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanadeiar.Core.WPF", "Kanadeiar.Core.WPF\Kanadeiar.Core.WPF.csproj", "{C7B88B94-66FD-4C71-ADEA-704894FFB277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanadeiar.Core.WPF", "Kanadeiar.Core.WPF\Kanadeiar.Core.WPF.csproj", "{C7B88B94-66FD-4C71-ADEA-704894FFB277}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanadeiar.Core.Tests", "Tests\Kanadeiar.Core.Tests\Kanadeiar.Core.Tests.csproj", "{B63AB52C-0F44-4D3C-B719-8F0084356BB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanadeiar.Core.Tests", "Tests\Kanadeiar.Core.Tests\Kanadeiar.Core.Tests.csproj", "{B63AB52C-0F44-4D3C-B719-8F0084356BB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45E27C7B-C880-4AEB-833F-2234AFCE4C1F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
-﻿using Kanadeiar.Core.Encoders;
+﻿using Kanadeiar.Core;
+using Kanadeiar.Core.Encoders;
 
 namespace WpfAppTest
 {
