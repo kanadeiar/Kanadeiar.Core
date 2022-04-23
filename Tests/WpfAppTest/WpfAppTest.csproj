@@ -12,7 +12,6 @@
   </ItemGroup>-->
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Kanadeiar.Core.WPF\Kanadeiar.Core.WPF.csproj" />
     <ProjectReference Include="..\..\Kanadeiar.Core\Kanadeiar.Core.csproj" />
   </ItemGroup>
 
