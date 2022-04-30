@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
 	<PackageReleaseNotes>
-		Добавлены базовые сущности
+		Добавлен маркер версии в базовую сущность
 	</PackageReleaseNotes>
   </PropertyGroup>
 
