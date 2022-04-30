@@ -12,6 +12,12 @@ public interface IKndEntity<TId> : IKndEntity
     /// </summary>
     [Key]
     public TId Id { get; set; }
+
+    /// <summary> 
+    /// Маркер версии 
+    /// </summary>
+    [Timestamp]
+    public byte[] RowVersion { get; set; }
 }
 
 /// <summary>
