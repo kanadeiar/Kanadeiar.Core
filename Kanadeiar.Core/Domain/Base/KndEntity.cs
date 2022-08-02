@@ -7,7 +7,7 @@ namespace Kanadeiar.Core.Domain.Base;
 /// Базовая сущность библиотеки
 /// </summary>
 /// <typeparam name="TKey">Тип ключа</typeparam>
-abstract public class KndEntity<TKey> : IKndEntity<TKey>, IEquatable<KndEntity<TKey>> where TKey : IEquatable<TKey>
+public abstract class KndEntity<TKey> : IKndEntity<TKey>, IEquatable<KndEntity<TKey>> where TKey : IEquatable<TKey>
 {
     /// <summary>
     /// Идентификатор

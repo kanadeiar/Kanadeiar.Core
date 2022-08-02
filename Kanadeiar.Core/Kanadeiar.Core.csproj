@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.4</Version>
+    <Version>0.0.5</Version>
 	<PackageReleaseNotes>
-		Добавлен маркер версии в базовую сущность
+		Добавлен инструмент замера производительности и метод поддержки событий, эволюция базовых сущностей
 	</PackageReleaseNotes>
   </PropertyGroup>
 

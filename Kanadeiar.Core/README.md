@@ -33,4 +33,14 @@ public virtual void OnMessage(TestEventArgs e)
 CaesarEncoder
 ```
 
+## Инструменты
+
+### Инструмент замера производительности - скорости работы кода и количества сборок мусора
+
+```sharp
+using (new OperationTimer("Выводимый в консоль текст"))
+{
+    // измеряемый код
+}
+```
 
