@@ -3,7 +3,7 @@
     /// <summary>
     /// Шифрование методом Цезаря
     /// </summary>
-    public class CaesarEncoder
+    public sealed class CaesarEncoder
     {
         /// <summary>
         /// Зашифровать
