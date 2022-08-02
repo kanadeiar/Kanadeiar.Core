@@ -1,8 +1,34 @@
 # Быстрый старт
 
-## Информация
+## Базовые сущности
 
-Шифрование методом Цезаря
+Интерфейсы:
+
+```sharp
+IKndEntity
+IKndEntity<T>
+```
+
+Сущности:
+
+```sharp
+KndEntity
+KndEntity<T>
+```
+
+## События
+
+Вызов расширяющего метода уведомления о произошедшем событии:
+
+```sharp
+public virtual void OnMessage(TestEventArgs e)
+{
+    e.Raise(this, ref Message); //вызов метода
+}
+```
+
+## Шифрование методом Цезаря
+
 ```sharp
 CaesarEncoder
 ```

@@ -1,28 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Kanadeiar.Core.Domain.Base;
+﻿namespace Kanadeiar.Core.Domain.Base;
 
 /// <summary>
-/// Базовая сущность библиотек
+/// Базовая сущность библиотеки
 /// </summary>
-public interface IKndEntity<TId> : IKndEntity
+/// <typeparam name="TKey">Тип ключа</typeparam>
+public interface IKndEntity<TKey>
 {
     /// <summary>
     /// Идентификатор
     /// </summary>
-    [Key]
-    public TId Id { get; set; }
-
-    /// <summary> 
-    /// Маркер версии 
-    /// </summary>
-    [Timestamp]
-    public byte[] RowVersion { get; set; }
+    TKey Id { get; set; }
 }
 
 /// <summary>
-/// Базовая сущность библиотек
+/// Базовая сущность библиотеки с целочисленным ключем
 /// </summary>
-public interface IKndEntity
-{
-}
+public interface IKndEntity : IKndEntity<int> { }
+
