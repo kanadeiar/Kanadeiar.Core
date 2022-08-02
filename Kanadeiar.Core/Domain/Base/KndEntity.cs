@@ -7,7 +7,7 @@ namespace Kanadeiar.Core.Domain.Base;
 /// Базовая сущность библиотеки
 /// </summary>
 /// <typeparam name="TKey">Тип ключа</typeparam>
-public abstract class KndEntity<TKey> : IKndEntity<TKey>, IEquatable<KndEntity<TKey>> where TKey : IEquatable<TKey>
+public abstract class KndEntity<TKey> : KndEntity, IKndEntity<TKey>, IEquatable<KndEntity<TKey>> where TKey : IEquatable<TKey>
 {
     /// <summary>
     /// Идентификатор
@@ -65,11 +65,9 @@ public abstract class KndEntity<TKey> : IKndEntity<TKey>, IEquatable<KndEntity<T
 }
 
 /// <summary>
-/// Базовая сущность библиотеки с целочисленным ключем
+/// Совсем базовая сущность библиотеки
 /// </summary>
-public abstract class KndEntity : KndEntity<int>, IKndEntity
+public abstract class KndEntity : IKndEntity
 {
     protected KndEntity() { }
-
-    protected KndEntity(int Id) : base(Id) { }
 }

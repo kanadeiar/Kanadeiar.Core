@@ -4,7 +4,7 @@
 /// Базовая сущность библиотеки
 /// </summary>
 /// <typeparam name="TKey">Тип ключа</typeparam>
-public interface IKndEntity<TKey>
+public interface IKndEntity<TKey> : IKndEntity
 {
     /// <summary>
     /// Идентификатор
@@ -13,7 +13,7 @@ public interface IKndEntity<TKey>
 }
 
 /// <summary>
-/// Базовая сущность библиотеки с целочисленным ключем
+/// Совсем базовая сущность библиотеки
 /// </summary>
-public interface IKndEntity : IKndEntity<int> { }
+public interface IKndEntity { }
 
