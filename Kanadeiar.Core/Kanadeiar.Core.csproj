@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.7</Version>
+    <Version>0.0.10</Version>
 	<PackageReleaseNotes>
-		Добавление инструмента для работы с перечислениями
+		Восстановление работоспособности
 	</PackageReleaseNotes>
   </PropertyGroup>
 
