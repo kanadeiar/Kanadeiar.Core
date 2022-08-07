@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Kanadeiar.Core.Domain.Base;
+namespace Kanadeiar.Core.Base;
 
 /// <summary>
 /// Базовая сущность библиотеки
@@ -71,3 +71,4 @@ public abstract class KndEntity : IKndEntity
 {
     protected KndEntity() { }
 }
+

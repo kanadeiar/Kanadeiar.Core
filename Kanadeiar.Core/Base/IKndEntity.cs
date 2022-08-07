@@ -1,4 +1,4 @@
-﻿namespace Kanadeiar.Core.Domain.Base;
+﻿namespace Kanadeiar.Core.Base;
 
 /// <summary>
 /// Базовая сущность библиотеки
