@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.7</Version>
+    <Version>0.0.8</Version>
 	<PackageReleaseNotes>
-		Добавление инструмента для работы с перечислениями
+		Добавление интерфейсов, изменение пространств имен
 	</PackageReleaseNotes>
   </PropertyGroup>
 
