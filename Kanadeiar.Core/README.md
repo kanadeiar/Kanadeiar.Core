@@ -59,11 +59,62 @@ catch (Exception<SampleExceptionArgs> ex)
 }
 ```
 
-## Шифрование методом Цезаря
+## Асинхронность
+
+### Метод расширения отмены операции
+
+Метод расширения WithCancellation() позволяет отменять асинхронную операцию через заданный интервал времени. 
+
+Пример использования этого расширения:
 
 ```sharp
-CaesarEncoder
+Console.WriteLine("Отмена операции");
+var cts = new CancellationTokenSource(1_000);
+var token = cts.Token;
+try
+{
+    await Task.Delay(10_000).WithCancellation(token); // метод отмены асинхронной операции
+}
+catch (OperationCanceledException)
+{
+    Console.WriteLine("Операция отменена");
+}
 ```
+
+### Класс поддержки отладки асинхронного кода
+
+Класс TaskLogger позволяет выводить информацию о незавершенных асинхронных операциях. Полезен при отладке асинхронного кода, когда приложение виснет.
+
+Пример использования этого класса:
+
+```sharp
+#if DEBUG
+// Использование TaskLogger приводит к лишним затратам памяти
+// и снижению производительности; включить для отладочной версии
+TaskLogger.LogLevel = TaskLogger.TaskLogLevel.Pending;
+#endif
+var tasks = new List<Task>
+{
+    Task.Delay(2_000).Log("2с"), // добавление логирования
+    Task.Delay(4_000).Log("4с"), // добавление логирования
+    Task.Delay(6_000).Log("6с"), // добавление логирования
+};
+
+try
+{
+    await Task.WhenAll(tasks).WithCancellation(new CancellationTokenSource(3_000).Token);
+}
+catch (OperationCanceledException)
+{
+}
+
+var logs = TaskLogger.GetLogStrings().ToArray(); // показ информации логирования
+Array.ForEach(logs, Console.WriteLine);
+```
+
+## Шифрование методом Цезаря
+
+Метод CaesarEncoder шифрует/расшифровывает методом цезаря
 
 ## Инструменты
 
