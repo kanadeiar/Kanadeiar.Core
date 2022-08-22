@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.13</Version>
+    <Version>0.0.14</Version>
 	<PackageReleaseNotes>
-		Добавлены методы поддержки разработки асинхронного кода
+		Класс, предоставляющий возможность асинхронной синхронизации с семантикой чтения/записи
 	</PackageReleaseNotes>
   </PropertyGroup>
 
