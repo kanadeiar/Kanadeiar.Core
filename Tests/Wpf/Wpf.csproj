@@ -6,18 +6,39 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>avatar.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="avatar.ico" />
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <!--<ItemGroup>
     <PackageReference Include="Kanadeiar.Core" Version="0.0.15" />
   </ItemGroup>-->
-
   <ItemGroup>
     <ProjectReference Include="..\..\Kanadeiar.Core\Kanadeiar.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.Configuration"/>
+    <Using Include="System.Data"/>
+    <Using Include="System.Text"/>
+    <Using Include="System.Windows"/>
+    <Using Include="System.Windows.Controls"/>
+    <Using Include="System.Windows.Data" />
+    <Using Include="System.Windows.Documents"/>
     <Using Include="System.Windows.Input"/>
+    <Using Include="System.ComponentModel"/>
+    <Using Include="System.Runtime.CompilerServices"/>
+    <Using Include="System.Windows.Controls.Primitives"/>
   </ItemGroup>
   
 </Project>

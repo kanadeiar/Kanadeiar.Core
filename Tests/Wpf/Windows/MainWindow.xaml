@@ -1,0 +1,39 @@
+﻿<Window x:Class="Wpf.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctrl="clr-namespace:Wpf.Controls"
+        xmlns:local="clr-namespace:Wpf.Windows"
+        mc:Ignorable="d"
+        DataContext="{Binding MainWindowViewModel, Source={StaticResource Locator}}"
+        Title="{Binding Title}"
+        Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" >
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Главное меню">
+                <MenuItem Header="Файл"/>
+                <Separator/>
+                <MenuItem Header="Выход" Command="{Binding CloseAppCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе ..."
+                          />
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Панель состояния приложения"/>
+                </StackPanel>
+        </StatusBar>
+        <TabControl FontSize="14">
+            <TabItem Header="Главная" Height="40">
+                <StackPanel>
+                    <TextBox Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <ctrl:SampleControl Value="{Binding Value}"/>
+                    <Frame Source="../Views/MainPage.xaml"></Frame>
+                </StackPanel>                
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>
