@@ -1,18 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.14</Version>
-	<PackageReleaseNotes>
-		Класс, предоставляющий возможность асинхронной синхронизации с семантикой чтения/записи
-	</PackageReleaseNotes>
+    <Version>0.0.15</Version>
+    <PackageReleaseNotes>
+      Обновление версии целевого фреймворка
+    </PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup>
-	<TargetFramework>net6.0</TargetFramework>
-	<ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
-	
-  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Authors>Rassakhatskiy Andrey</Authors>
     <Company>Kanadeiar</Company>
@@ -26,10 +23,10 @@
     <SignAssembly>True</SignAssembly>
     <DelaySign>False</DelaySign>
     <AssemblyOriginatorKeyFile>Kanadeiar.snk</AssemblyOriginatorKeyFile>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-	<Language>C#</Language>
-	<Title>Kanadeiar.Core</Title>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+	  <Language>C#</Language>
+	  <Title>Kanadeiar.Core</Title>
   </PropertyGroup>
 
   <ItemGroup>

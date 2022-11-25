@@ -13,15 +13,7 @@ public abstract class KndEntity<TKey> : KndEntity, IKndEntity<TKey>, IEquatable<
     /// Идентификатор
     /// </summary>
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public TKey Id { get; set; }
-
-    /// <summary> 
-    /// Датовременной штамп 
-    /// </summary>
-    [Timestamp]
-    public byte[]? Timestamp { get; set; }
-
-    protected KndEntity() { }
+    public TKey Id { get; set; } = default!;
 
     protected KndEntity(TKey Id) => this.Id = Id;
 
@@ -69,6 +61,12 @@ public abstract class KndEntity<TKey> : KndEntity, IKndEntity<TKey>, IEquatable<
 /// </summary>
 public abstract class KndEntity : IKndEntity
 {
+    /// <summary> 
+    /// Датовременной штамп 
+    /// </summary>
+    [Timestamp]
+    public byte[]? Timestamp { get; set; }
+
     protected KndEntity() { }
 }
 
