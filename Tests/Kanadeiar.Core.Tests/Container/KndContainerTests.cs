@@ -20,7 +20,7 @@ public class KndContainerTests
 
         var fi = typeof(KndContainer).GetField("_regs", BindingFlags.NonPublic | BindingFlags.Instance);
         var dict = (IDictionary<Type, Func<object>>)fi.GetValue(container);
-        Assert.Equal(1, dict.Count);
+        dict.Count.Should().Be(1);
         Assert.IsType<TestTest>(dict[typeof(ITestTest)].Invoke());
     }
     [Fact]
@@ -33,7 +33,7 @@ public class KndContainerTests
 
         var fi = typeof(KndContainer).GetField("_regs", BindingFlags.NonPublic | BindingFlags.Instance);
         var dict = (IDictionary<Type, Func<object>>)fi.GetValue(container);
-        Assert.Equal(1, dict.Count);
+        dict.Count.Should().Be(1);
         Assert.IsType<TestTest>(dict[typeof(ITestTest)].Invoke());
     }
     [Fact]
@@ -46,7 +46,7 @@ public class KndContainerTests
 
         var fi = typeof(KndContainer).GetField("_regs", BindingFlags.NonPublic | BindingFlags.Instance);
         var dict = (IDictionary<Type, Func<object>>)fi.GetValue(container);
-        Assert.Equal(1, dict.Count);
+        dict.Count.Should().Be(1);
         Assert.IsType<TestTest>(dict[typeof(ITestTest)].Invoke());
     }
     [Fact]
@@ -59,7 +59,7 @@ public class KndContainerTests
 
         var fi = typeof(KndContainer).GetField("_regs", BindingFlags.NonPublic | BindingFlags.Instance);
         var dict = (IDictionary<Type, Func<object>>)fi.GetValue(container);
-        Assert.Equal(1, dict.Count);
+        dict.Count.Should().Be(1);
         Assert.IsType<TestTest>(dict[typeof(ITestTest)].Invoke());
     }
     [Fact]
