@@ -7,6 +7,7 @@ namespace Kanadeiar.Core.Exceptions;
 /// Обобщенный класс исключения
 /// </summary>
 [Serializable]
+[Obsolete]
 public class Exception<TExceptionArgs> : Exception, ISerializable where TExceptionArgs : ExceptionArgs
 {
     private const string __args = "ExceptionArgs";
@@ -14,7 +15,7 @@ public class Exception<TExceptionArgs> : Exception, ISerializable where TExcepti
     /// <summary>
     /// Данные исключения
     /// </summary>
-    public TExceptionArgs Args => _args;
+    public TExceptionArgs Args => Args1;
 
     public Exception(string? message = null, Exception? innerException = null)
     : this(null!, message, innerException)
@@ -27,7 +28,7 @@ public class Exception<TExceptionArgs> : Exception, ISerializable where TExcepti
     [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
     private Exception(SerializationInfo info, StreamingContext content) : base(info, content)
     {
-        _args = (TExceptionArgs)info.GetValue(__args, typeof(TExceptionArgs));
+        _args = (TExceptionArgs)info.GetValue(__args, typeof(TExceptionArgs))!;
     }
     [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
     public override void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -40,16 +41,18 @@ public class Exception<TExceptionArgs> : Exception, ISerializable where TExcepti
         get
         {
             var s = base.Message;
-            return (_args == null) ? s : s + " (" + _args.Message + ")";
+            return (Args1 == null) ? s : s + " (" + Args1.Message + ")";
         }
     }
+
+    public TExceptionArgs Args1 => _args;
 
     public override bool Equals(object? obj)
     {
         var other = obj as Exception<TExceptionArgs>;
         if (other is null)
             return false;
-        return object.Equals(_args, other._args) && base.Equals(obj);
+        return object.Equals(Args1, other.Args1) && base.Equals(obj);
     }
     public override int GetHashCode() => base.GetHashCode();
 }

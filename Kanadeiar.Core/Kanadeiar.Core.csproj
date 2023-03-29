@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.15</Version>
+    <Version>0.0.16</Version>
     <PackageReleaseNotes>
-      Обновление версии целевого фреймворка
+      Добавлен простейший контейнер внедрения зависимостей
     </PackageReleaseNotes>
   </PropertyGroup>
 
