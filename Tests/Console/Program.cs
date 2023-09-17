@@ -1,13 +1,5 @@
-﻿Console.WriteLine("Test Container");
+﻿Console.WriteLine("Опытное приложение");
 
-IKndContainer container = new KndContainer();
 
-container.Register<ISecond, Second>();
-container.Register<ISample, Sample>();
-
-var sample = container.Resolve<ISample>();
-
-Console.WriteLine($"Message: {sample.GetMessage()}");
-
-Console.WriteLine("Press Any Key to end ...");
+Console.WriteLine("Нажать любую кнопку для завершения ...");
 var _ = Console.ReadKey();

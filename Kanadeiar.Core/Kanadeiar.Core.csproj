@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.16</Version>
+    <Version>0.0.17</Version>
     <PackageReleaseNotes>
-      Добавлен простейший контейнер внедрения зависимостей
-    </PackageReleaseNotes>
+	    Небольшие доработки базовой сущности
+	</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup>

@@ -15,8 +15,17 @@ public abstract class KndEntity<TKey> : KndEntity, IKndEntity<TKey>, IEquatable<
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public TKey Id { get; set; } = default!;
 
+    /// <summary>
+    /// Конструктор стандартный
+    /// </summary>
+    /// <param name="Id">Новое значение идентификатора</param>
     protected KndEntity(TKey Id) => this.Id = Id;
 
+    /// <summary>
+    /// Сравнение с тем-же типом
+    /// </summary>
+    /// <param name="other">Другой объект</param>
+    /// <returns>Равны</returns>
     public bool Equals(KndEntity<TKey>? other)
     {
         if (other is null) return false;
@@ -27,6 +36,11 @@ public abstract class KndEntity<TKey> : KndEntity, IKndEntity<TKey>, IEquatable<
         return EqualityComparer<TKey>.Default.Equals(Id, other.Id);
     }
 
+    /// <summary>
+    /// Сравнение с общим общектом
+    /// </summary>
+    /// <param name="obj">Другой общий объект</param>
+    /// <returns>Равны</returns>
     public override bool Equals(object? obj)
     {
         if (obj is null) return false;
@@ -34,10 +48,14 @@ public abstract class KndEntity<TKey> : KndEntity, IKndEntity<TKey>, IEquatable<
         return obj.GetType() == GetType() && Equals((KndEntity<TKey>)obj);
     }
 
-    public override int GetHashCode() =>
-    EqualityComparer<TKey>.Default.Equals(Id, default)
+    /// <summary>
+    /// Получить хеш объекта
+    /// </summary>
+    /// <returns>Хеш</returns>
+    public override int GetHashCode() => 
+        EqualityComparer<TKey>.Default.Equals(Id, default)
         ? base.GetHashCode()
-        : EqualityComparer<TKey>.Default.GetHashCode(Id);
+        : EqualityComparer<TKey>.Default.GetHashCode(Id!);
 
     /// <summary>
     /// Оператор проверки на равенство двух сущностей
@@ -67,6 +85,9 @@ public abstract class KndEntity : IKndEntity
     [Timestamp]
     public byte[]? Timestamp { get; set; }
 
+    /// <summary>
+    /// Конструтор по умолчанию
+    /// </summary>
     protected KndEntity() { }
 }
 
